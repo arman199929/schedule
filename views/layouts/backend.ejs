@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="/css/backend/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0">
+                <img src="https://thumbs.dreamstime.com/z/calendar-schedule-clock-icon-vector-graphic-design-logo-web-site-social-media-mobile-app-ui-illustration-143127805.jpg"
+                     alt="Page1" width="30" height="30">
+            </a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <form action="/backend/signout" method="post">
+                    <button class="btn btn-sm btn-dark btn-block">Sign out.</button>
+                </form>
+
+
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2  d-md-block bg-dark sidebar navigation" id="navigation">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+
+                            <a href="/backend/users" class="nav-link">
+                                <ion-icon name="person-outline"></ion-icon>
+                                Manage User
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/backend/dept" class="nav-link">
+                                <ion-icon name="book-outline"></ion-icon>
+                                Manage D-pt
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/backend/lecturer" class="nav-link">
+                                <ion-icon name="briefcase-outline"></ion-icon>
+                                Manage Lecturer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+
+                        </li>
+                        <li class="nav-item">
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 text-center user-list">
+                <h2 class="h2"><%- include('../backend/partials/header.ejs') %></h2>
+                <%- body %>
+
+            </main>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../backend/partials/footer.ejs') %>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

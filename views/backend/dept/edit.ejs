@@ -1,0 +1,24 @@
+<body class="edit-dept">
+<div class="dept">
+    <form method="post" action="/backend/dept/update">
+        <input type="hidden" name="id" value="<%= dept.id %>">
+        <label for="name">Edit name:</label><br>
+        <input type="text" name="name" value="<%= dept.name %>"><br>
+        <label for="time">Duration:</label><br>
+        <input type="number" name="time" value="<%= dept.time %>" min="0"><br>
+        <label for="start">Beginning time:</label><br>
+        <% let d = dept.start
+        let da = d.toString().substr(0, 24) + 'Z' %>
+        <input type="datetime-local" name="start" value="<%= new Date(da).toISOString().substr(0, 16) %>"><br>
+        <label for="end">End time:</label><br>
+        <% d = dept.end
+        da = d.toString().substr(0, 24) + 'Z' %>
+        <input type="datetime-local" name="end"
+               value="<%= new Date(da).toISOString().substr(0, 16) %>"><br>
+
+
+        <br>
+        <input type="submit" value="Edit" class="btn btn-sm btn-dark">
+    </form>
+</div>
+</body>

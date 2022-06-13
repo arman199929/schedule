@@ -1,0 +1,47 @@
+<table class="table table-condensed table-striped table-bordered" border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% lect.forEach(function(column){
+    %>
+
+        <tr>
+            <td> <%= column.name %></td>
+            <td> <%= column.surname %></td>
+
+            <td><%= column.email %></td>
+            <td>
+                <a href="lecturer/edit/<%= column.id%>">
+                    <ion-icon name="card"></ion-icon>
+                </a>
+
+                <a href="lecturer/show/<%= column.id%>">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </a>
+                <form method="post" action="/backend/lecturer/delete">
+                    <input type="hidden" value="" name="id">
+                    <button>
+                        <ion-icon name="trash"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+    <% }); %>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+
+            <a href="/backend/lecturer/create">
+                <ion-icon name="create-outline"></ion-icon>
+                Create lecturers
+            </a>
+        </li>
+    </ul>
+    </tbody>
+</table>

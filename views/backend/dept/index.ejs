@@ -1,0 +1,49 @@
+<table class="table table-condensed table-striped table-bordered" border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Beginning time</th>
+        <th>End time</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% dept.forEach(function(col){
+    %>
+
+        <tr>
+            <td> <%= col.name %></td>
+            <td> <%= col.time %>/h</td>
+            <td>
+                <% let start = col.start %>
+                <%= start.toString().substr(0, 24) %>
+            </td>
+            <td> <% let end = col.end %>
+            <%= end.toString().substr(0, 24)%>
+            </td>
+            <td>
+                <a href="dept/edit/<%= col.id %>">
+                    <ion-icon name="card"></ion-icon>
+                </a>
+                <form method="post" action="/backend/dept/delete">
+                    <input type="hidden" value="<%= col.id %>" name="id">
+                    <button>
+                        <ion-icon name="trash"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+    <% }); %>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+
+            <a href="/backend/dept/create">
+                <ion-icon name="create-outline"></ion-icon>
+                Create dept
+            </a>
+        </li>
+    </ul>
+    </tbody>
+</table>

@@ -1,0 +1,58 @@
+<div class="table table-dark">
+
+    <div class="row">
+        <div class="col-4 c-light "><h4>Name:</h4></div>
+
+        <div class="col-4"><span> <%= lect.name %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 c-light "><h4>Surname:</h4></div>
+
+        <div class="col-4"><span> <%= lect.surname %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Birthday:</h4></div>
+        <div class="col-4"><span>
+                <% let start = lect.b_day %>
+                <%= start.toString().substr(0, 15) %> </span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Email:</h4></div>
+        <div class="col-4"><span> <%= lect.email %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Phone:</h4></div>
+        <div class="col-4"><span> <%= lect.phone %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Address:</h4></div>
+        <div class="col-4"><span> <%= lect.address %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Profession:</h4></div>
+        <div class="col-4"><span> <%= lect.profession %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Work company:</h4></div>
+        <div class="col-4"><span> <%= lect.work_name %></span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"><h4>Skills</h4></div>
+        <div class="col-4">
+            <% lect.subject_id.forEach(function (value){ %>
+                <p><%= value.name %></p>
+            <% }) %>
+        </div>
+    </div>
+
+</div>
+
+

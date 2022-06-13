@@ -1,0 +1,24 @@
+<body class="edit">
+    <form method="post" action="/backend/users/update">
+        <input type="hidden" name="id" value="<%= user.id %>">
+        <label for="name">Edit name:</label><br>
+        <input type="text" name="name" value="<%= user.name %>"><br>
+        <label for="email">Edit email:</label><br>
+        <input type="email" name="email" value="<%= user.email %>"><br>
+
+        <br>
+        <input type="submit" value="Edit" class="btn btn-sm btn-dark">
+    </form>
+
+    <h2>Change password</h2>
+    <form method="post" action="/backend/users/changepassword">
+        <input type="hidden" name="id" value="<%= user.id %>">
+        <label for="oldpass">Old password:</label><br>
+        <input type="text" name="oldpass" id="oldpass"><br>
+        <label for="newpass">New password:</label><br>
+        <input type="text" name="newpass" id="newpass"><br>
+        <label for="repass">Confirm password:</label><br>
+        <input type="text" name="repass" id="repass"><br>
+        <input type="submit" value="Change password" class="btn btn-sm btn-dark">
+    </form>
+</body>

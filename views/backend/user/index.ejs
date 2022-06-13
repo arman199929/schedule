@@ -1,0 +1,40 @@
+<table class="table table-condensed table-striped table-bordered" border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email address</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% users.forEach(function(user){
+    %>
+
+        <tr>
+            <td> <%= user.name %></td>
+            <td> <%= user.email %></td>
+            <td>
+                <a href="users/edit/<%= user.id %>">
+                    <ion-icon name="create"></ion-icon>
+                </a>
+                <form method="post" action="/backend/users/delete">
+                    <input type="hidden" value="<%= user.id %>" name="id">
+                    <button>
+                        <ion-icon name="trash"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+    <% }); %>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+
+            <a href="/backend/users/create">
+                <ion-icon name="create-outline"></ion-icon>
+                Create user
+            </a>
+        </li>
+    </ul>
+    </tbody>
+</table>

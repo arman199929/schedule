@@ -1,0 +1,39 @@
+<body class="lecturer-body">
+<form method="post" action="create">
+    <label for="name">Enter name:</label><br>
+    <input type="text" name="name" id="name" placeholder="Name"><br>
+
+    <label for="surname">Enter surname:</label><br>
+    <input type="text" name="surname" id="surname" placeholder="Surname"><br>
+
+    <label for="phone">Enter phone:</label><br>
+    <input type="text" name="phone" id="phone" placeholder="Phone"><br>
+
+    <label for="email">Enter email:</label><br>
+    <input type="email" name="email" id="email" placeholder="Email"><br>
+
+    <label for="skills">Skills</label><br>
+    <select name="subject" id="skills" multiple>
+        <% if(subject.length > 0){ %>
+            <% for(const skill of subject) { %>
+                <option value="<%= skill.id %>"><%= skill.name %></option>
+        <% }} %>
+    </select><br>
+
+    <label for="b_day">Birth day:</label><br>
+    <input type="date" name="b_day" id="b_day" value="1970-01-01"><br>
+
+    <label for="address">Enter address:</label><br>
+    <input type="text" name="address" id="address" placeholder="Address"><br>
+
+
+    <label for="profession">Enter profession:</label><br>
+    <input type="text" name="profession" id="profession" placeholder="Profession"><br>
+
+    <label for="work_name">Enter work company:</label><br>
+    <input type="text" name="work_name" id="work_name" placeholder="Work company"><br>
+
+
+    <input type="submit" value="Create" class="btn btn-sm btn-dark">
+</form>
+</body>

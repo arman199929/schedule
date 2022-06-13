@@ -1,0 +1,47 @@
+<title><%= title %></title>
+<body id="body" class="text-center">
+
+
+<div class="log_in">
+
+    <fieldset class="login">
+        <legend>Log_In</legend>
+        <form action="backend/login" method="post">
+            <div class="text-center mb-4">
+                <img src="https://image.shutterstock.com/z/stock-vector-people-planning-concept-entrepreneurship-and-calendar-schedule-planning-with-filling-course-1523635688.jpg"
+                     alt="" width="72" height="72">
+            </div>
+
+            <div class="form-label-group">
+                <input type="text" class="form-control" placeholder="Email address" required autofocus name="email">
+                <% if(mail === 'email'){ %>
+                    <p style="color: red"> &#9762 Error </p>
+                <% } %>
+                <label for="">Email address</label><br>
+            </div>
+
+
+            <div class="form-label-group">
+                <input type="password" class="form-control pass" placeholder="Password" required autofocus
+                       name="password">
+                <% if(pass === 'password'){ %>
+                    <p style="color: red"> &#9762 Error </p>
+                <% } %>
+
+                <label for="">Password</label><br>
+            </div>
+
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="Log_In">
+            <p class="mt-5 mb-3 text-muted text-center">© 2020-2022</p>
+        </form>
+
+    </fieldset>
+</div>
+
+
+<footer>
+
+</footer>
+
+
+</body>

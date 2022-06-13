@@ -1,0 +1,12 @@
+
+<h4><%= phone %></h4>
+<% if(emailsVisible) { %>
+    <% for (var i = 0; i < emails.length ; i++) { %>
+        <p
+        <% if(i % 2 !== 0){ %>
+            <%= "style=color:red"%>
+                <%}%>
+        ><%= emails[i] %></p>
+    <% } %>
+<% } %>
+

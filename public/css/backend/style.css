@@ -1,0 +1,81 @@
+
+body {
+    background-color: #ddd7e5;
+    font-family: 'Arvo', serif;
+}
+
+#body {
+    background: url("https://www.herzing.edu/sites/default/files/styles/fp_960_640/public/2020-09/it_computer_programming.jpg.webp?itok=8aEwtSxk");
+    background-size: cover;
+    text-align: center;
+}
+
+legend {
+    font-size: x-large;
+}
+
+.login {
+    border: black solid 1px;
+    padding: 20px;
+    border-radius: 6px;
+    display: inline;
+    background-color: rgba(187, 175, 241, 0.72);
+    margin-top: 50px;
+
+}
+
+aside {
+    display: flex;
+    flex: 2;
+
+}
+
+#main {
+    display: flex;
+    flex: 8;
+
+}
+
+.logout {
+    text-align: end;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.log-body {
+    background: url("https://i.pinimg.com/564x/73/b5/29/73b529d975c06482d7a9ee7556387ef6.jpg");
+    background-size: cover;
+}
+
+#navigation {
+    height: 100%;
+    position: absolute;
+
+
+}
+
+.nav-link {
+    color: #ddd7e5;
+}
+
+.edit {
+    background-image: url("https://images.pexels.com/photos/3297593/pexels-photo-3297593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+}
+
+.dept-create {
+    background-image: url("https://images.pexels.com/photos/1910225/pexels-photo-1910225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    color: #cef3ca;
+}
+.dept{
+    font-family: 'Arvo', serif;
+}
+.edit-dept{
+    background-image:url("https://images.pexels.com/photos/866351/pexels-photo-866351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}

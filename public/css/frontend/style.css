@@ -1,0 +1,24 @@
+
+#body {
+    /*background-color: rgba(65, 115, 201, 0.33);*/
+    font-family: 'Arvo', serif;
+    background-color: #333;
+    height: 100%;
+}
+
+.menu {
+    text-align: center;
+    background-color: #00231e;
+    padding: 13px;
+    border-radius: 6px;
+}
+
+.click {
+    color: #21cca0;
+    padding: 13px;
+    text-decoration: none;
+    background-color: #00483f;
+    margin: 20px;
+    padding-inline: 54px;
+    border-radius: 20px;
+}

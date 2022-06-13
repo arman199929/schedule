@@ -1,0 +1,36 @@
+<body class="edit-lecturer">
+<div class="dept">
+    <form method="post" action="/backend/lecturer/update">
+        <input type="hidden" name="id" value="<%= lect.id %>">
+        <label for="name">Edit name:</label><br>
+        <input type="text" name="name" id="name" value="<%= lect.name %>"><br>
+
+        <label for="surname">Edit surname:</label><br>
+        <input type="text" name="time" id="surname" value="<%= lect.surname %>" min="0"><br>
+
+        <label for="b_day">Birthday:</label><br>
+        <% let d = lect.b_day
+        let b_date = d.toString().substr(0, 24) + 'Z' %>
+        <input type="datetime-local" name="start" id="b_day"
+               value="<%= new Date(b_date).toISOString().substr(0, 16) %>"><br>
+
+        <label for="email">Edit email:</label><br>
+        <input type="email" id="email" value="<%= lect.email %>"><br>
+
+        <label for="phone">Edit phone:</label><br>
+        <input type="text" id="phone" value="<%= lect.phone %>"><br>
+
+        <label for="address">Edit address:</label><br>
+        <input type="text" id="address" value="<%= lect.address %>"><br>
+
+        <label for="profession">Edit profession:</label><br>
+        <input type="text" id="profession" value="<%= lect.profession %>"><br>
+
+        <label for="work_name">Edit company:</label><br>
+        <input type="text" id="work_name" value="<%= lect.work_name %>"><br>
+
+        <br>
+        <input type="submit" value="Edit" class="btn btn-sm btn-dark">
+    </form>
+</div>
+</body>
